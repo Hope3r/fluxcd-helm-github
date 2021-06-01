@@ -3,4 +3,5 @@ kind: Kustomization
 namespace: github-nginx
 resources:
   - ../../base/nginx
-  - release.yaml
+patchesStrategicMerge:
+  - nginx-values.yaml
