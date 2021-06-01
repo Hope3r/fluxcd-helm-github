@@ -1,8 +1,8 @@
 apiVersion: helm.toolkit.fluxcd.io/v2beta1
 kind: HelmRelease
 metadata:
-  name: nginx
-  namespace: github-nginx
+  name: podinfo
+  namespace: github-podinfo
 spec:
   chart:
     spec:
@@ -12,4 +12,4 @@ spec:
   values:
     ingress:
       hosts:
-        - oui.nginx.staging
+        - oui.podinfo.staging
