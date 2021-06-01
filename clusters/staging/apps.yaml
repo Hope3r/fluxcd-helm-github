@@ -3,8 +3,6 @@ kind: Kustomization
 metadata:
   name: apps
   namespace: flux-system
-resources: 
-  - ./apps/staging
 spec:
   interval: 1m0s
   dependsOn:
@@ -12,14 +10,15 @@ spec:
   sourceRef:
     kind: GitRepository
     name: flux-system
+  path: ./apps/staging
   prune: true
   validation: client
-  healthChecks:
-    - apiVersion: helm.toolkit.fluxcd.io/v1beta1
-      kind: HelmRelease
-      name: github-podinfo
-      namespace: github-podinfo
-    - apiVersion: helm.toolkit.fluxcd.io/v1beta1
-      kind: HelmRelease
-      name: github-nginx
-      namespace: github-nginx
+  # healthChecks:
+  #   - apiVersion: helm.toolkit.fluxcd.io/v1beta1
+  #     kind: HelmRelease
+  #     name: github-podinfo
+  #     namespace: github-podinfo
+  #   - apiVersion: helm.toolkit.fluxcd.io/v1beta1
+  #     kind: HelmRelease
+  #     name: github-nginx
+  #     namespace: github-nginx
