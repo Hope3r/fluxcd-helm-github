@@ -12,4 +12,4 @@ spec:
   values:
     ingress:
       hosts:
-        - test1.nginx.staging
+        - nginx.staging
