@@ -3,6 +3,8 @@ kind: Kustomization
 metadata:
   name: apps
   namespace: flux-system
+resources: 
+  - ./apps/staging
 spec:
   interval: 1m0s
   dependsOn:
@@ -10,8 +12,6 @@ spec:
   sourceRef:
     kind: GitRepository
     name: flux-system
-  resources: 
-    - ./apps/staging
   prune: true
   validation: client
   healthChecks:
