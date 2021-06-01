@@ -4,4 +4,4 @@ namespace: github-nginx
 resources:
   - ../../base/nginx
 patchesStrategicMerge:
-  - nginx-values.yaml
+  - ./nginx-values.yaml
