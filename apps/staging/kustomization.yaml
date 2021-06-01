@@ -5,4 +5,5 @@ resources:
   - ../base/podinfo
   - ../base/nginx
 patchesStrategicMerge:
-  - values.yaml
+  - podinfo-values.yaml
+  - nginx-values.yaml
