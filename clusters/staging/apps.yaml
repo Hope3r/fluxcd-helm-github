@@ -17,8 +17,8 @@ spec:
     - apiVersion: helm.toolkit.fluxcd.io/v1beta1
       kind: HelmRelease
       name: github-podinfo
-      namespace: podinfo
+      namespace: github-podinfo
     - apiVersion: helm.toolkit.fluxcd.io/v1beta1
       kind: HelmRelease
-      name: nginx
+      name: github-nginx
       namespace: github-nginx
