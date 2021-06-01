@@ -1,15 +1,9 @@
 apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
-namespace: github-nginx
+namespace: github
 resources:
   - ../base/nginx
-patchesStrategicMerge:
-  - nginx-values.yaml
----
-apiVersion: kustomize.config.k8s.io/v1beta1
-kind: Kustomization
-namespace: github-podinfo
-resources:
   - ../base/podinfo
 patchesStrategicMerge:
+  - nginx-values.yaml
   - podinfo-values.yaml
