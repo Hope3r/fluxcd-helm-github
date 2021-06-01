@@ -4,5 +4,3 @@ namespace: github-podinfo
 resources:
   - namespace.yaml
   - release.yaml
-patchesStrategicMerge:
-  - values.yaml

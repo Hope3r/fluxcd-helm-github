@@ -4,5 +4,3 @@ namespace: github-nginx
 resources:
   - namespace.yaml
   - release.yaml
-patchesStrategicMerge:
-  - values.yaml
