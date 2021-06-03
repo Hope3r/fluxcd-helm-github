@@ -13,16 +13,18 @@ spec:
     ingress:
       hosts:
         - registry.staging
-    extraFiles:
-      .usr.share.nginx.html.index.html: |-
-          eeegegegegeg
-    ## Additional volumeMounts to the main container.
-    # extraVolumeMounts: {}
-    #   - name: config
-    #     mountPath: /usr/share/nginx/html/index.html
-    #     subPath: index.html
+      ## Additional volumeMounts to the main container.
+      extraVolumeMounts: {}
+        - name: config
+          mountPath: /usr/share/nginx/html/index.html
+          subPath: index.html
 
-    # ## Additional volumes to the pod.
-    # extraVolumes: {}
-    #   - name: config
-    #   #   emptyDir: {}
+      ## Additional volumes to the pod.
+      extraVolumes: {}
+        # - name: volume
+        #   emptyDir: {}
+
+      ## Additional files to the configmap.
+      extraFiles:
+        index.html: |
+          Hello World!
