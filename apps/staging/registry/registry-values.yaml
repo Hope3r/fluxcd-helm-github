@@ -14,5 +14,9 @@ spec:
       hosts:
         - registry.staging
     extraFiles:
-      /usr/share/nginx/html/index.html: |
+      index.html: |
         Hello World!
+    extraVolumeMounts:
+      - name: config
+        mountPath: /usr/share/nginx/html/index.html
+        subPath: index.html
