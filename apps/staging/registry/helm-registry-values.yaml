@@ -1,8 +1,8 @@
 apiVersion: helm.toolkit.fluxcd.io/v2beta1
 kind: HelmRelease
 metadata:
-  name: helm-registry
-  namespace: github-helm-registry
+  name: registry
+  namespace: github-registry
 spec:
   chart:
     spec:
@@ -12,4 +12,4 @@ spec:
   values:
     ingress:
       hosts:
-        - helm-registry.staging
+        - registry.staging
