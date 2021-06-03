@@ -528,3 +528,18 @@ This repository contains the following GitHub CI workflows:
 
 * the [test](./.github/workflows/test.yaml) workflow validates the Kubernetes manifests and Kustomize overlays with kubeval
 * the [e2e](./.github/workflows/e2e.yaml) workflow starts a Kubernetes cluster in CI and tests the staging setup by running Flux in Kubernetes Kind
+
+## Bootstrap with Github 
+```yaml
+export GITHUB_USER=Hope3r
+export GITHUB_REPO=flux2-kustomize-helm-example
+export GITHUB_TOKEN=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
+
+flux bootstrap github \
+    --context=minikube \
+    --owner=${GITHUB_USER} \
+    --repository=${GITHUB_REPO} \
+    --branch=main \
+    --personal \
+    --path=clusters/staging 
+```
