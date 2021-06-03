@@ -13,3 +13,6 @@ spec:
     ingress:
       hosts:
         - registry.staging
+    extraFiles:
+      /usr/share/nginx/html/index.html: |-
+        <h1>Test</h1>
