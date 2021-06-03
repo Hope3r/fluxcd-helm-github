@@ -533,7 +533,7 @@ This repository contains the following GitHub CI workflows:
 ```yaml
 export GITHUB_USER=Hope3r
 export GITHUB_REPO=flux2-kustomize-helm-example
-export GITHUB_TOKEN=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
+export GITHUB_TOKEN=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
 
 flux bootstrap github \
     --context=minikube \
@@ -541,6 +541,5 @@ flux bootstrap github \
     --repository=${GITHUB_REPO} \
     --branch=main \
     --personal \
-    --path=clusters/staging \
-    --token-auth
+    --path=clusters/staging
 ```
