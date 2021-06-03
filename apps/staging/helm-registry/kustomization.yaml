@@ -4,4 +4,4 @@ kind: Kustomization
 resources:
   - ../../base/helm-registry
 patchesStrategicMerge:
-  - nginx-values.yaml
+  - helm-registry-values.yaml
