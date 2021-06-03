@@ -14,11 +14,11 @@ spec:
   prune: true
   validation: client
   healthChecks:
-    - apiVersion: helm.toolkit.fluxcd.io/v1beta1
-      kind: HelmRelease
-      name: github-podinfo
+    - apiVersion: apps/v1
+      kind: Deployment
+      name: podinfo
       namespace: github-podinfo
-    - apiVersion: helm.toolkit.fluxcd.io/v1beta1
-      kind: HelmRelease
-      name: github-nginx
+    - apiVersion: apps/v1
+      kind: Deployment
+      name: nginx
       namespace: github-nginx
