@@ -4,4 +4,4 @@ kind: Kustomization
 resources:
   - ../../base/nginx
 patchesStrategicMerge:
-  - values.yaml
+  - nginx-values.yaml
