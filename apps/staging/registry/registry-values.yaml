@@ -15,7 +15,7 @@ spec:
         - registry.staging
     extraFiles:
       /usr/share/nginx/html/index.html:
-        Test
+        eeegegegegeg
     ## Additional volumeMounts to the main container.
     # extraVolumeMounts: {}
     #   - name: config
