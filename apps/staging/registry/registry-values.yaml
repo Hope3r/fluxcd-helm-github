@@ -14,5 +14,5 @@ spec:
       hosts:
         - registry.staging
     extraFiles:
-      index.html: |
+      /usr/share/nginx/html/index.html: |
         Hello World!
