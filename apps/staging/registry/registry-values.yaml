@@ -14,7 +14,7 @@ spec:
       hosts:
         - registry.staging
       ## Additional volumeMounts to the main container.
-      extraVolumeMounts: {}
+      extraVolumeMounts:
         - name: config
           mountPath: /usr/share/nginx/html/index.html
           subPath: index.html
