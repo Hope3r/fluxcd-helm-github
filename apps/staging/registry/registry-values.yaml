@@ -13,9 +13,9 @@ spec:
     ingress:
       hosts:
         - registry.staging
-    extraFiles:
-      index.html: |
-        Hello World!
+    # extraFiles:
+    #   index.html: |
+    #     Hello World!
     extraVolumeMounts:
       - name: config
         mountPath: /usr/share/nginx/html/index.html
