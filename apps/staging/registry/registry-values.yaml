@@ -14,8 +14,10 @@ spec:
       hosts:
         - registry.staging
     extraFiles:
-      "/usr/share/nginx/html/index.html": |
-        Hello World!
+      - "/usr/share/nginx/html/index.html": |
+          Hello World!
+      - index.html: |
+          Test
     ## Additional volumeMounts to the main container.
     # extraVolumeMounts: {}
     #   - name: config
