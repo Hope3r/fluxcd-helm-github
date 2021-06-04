@@ -25,16 +25,16 @@ jobs:
         run: flux install
       - name: Setup cluster reconciliation
         run: |
-          flux create source git flux-system \
+          flux create source git flux-system-test \
           --url=${{ github.event.repository.html_url }} \
           --branch=${GITHUB_REF#refs/heads/}
-          flux create kustomization flux-system \
-          --source=flux-system \
+          flux create kustomization flux-system-test \
+          --source=flux-system-test \
           --path=./clusters/staging
       - name: Verify cluster reconciliation
         run: |
-          kubectl -n flux-system wait kustomization/infrastructure --for=condition=ready --timeout=1m
-          kubectl -n flux-system wait kustomization/apps --for=condition=ready --timeout=1m
+          kubectl -n flux-system-test wait kustomization/infrastructure --for=condition=ready --timeout=1m
+          kubectl -n flux-system-test wait kustomization/apps --for=condition=ready --timeout=1m
       - name: Verify helm reconciliation
         run: |
           kubectl -n nginx wait helmrelease/nginx --for=condition=ready --timeout=1m
@@ -43,7 +43,7 @@ jobs:
       - name: Debug failure
         if: failure()
         run: |
-          kubectl -n flux-system get all
-          kubectl -n flux-system logs deploy/source-controller
-          kubectl -n flux-system logs deploy/kustomize-controller
-          kubectl -n flux-system logs deploy/helm-controller
+          kubectl -n flux-system-test get all
+          kubectl -n flux-system-test logs deploy/source-controller
+          kubectl -n flux-system-test logs deploy/kustomize-controller
+          kubectl -n flux-system-test logs deploy/helm-controller

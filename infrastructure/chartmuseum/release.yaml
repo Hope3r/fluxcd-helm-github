@@ -10,7 +10,7 @@ spec:
       sourceRef:
         kind: HelmRepository
         name: chartmuseum
-        namespace: flux-system
+        namespace: flux-system-test
       version: "3.1.0"
   interval: 1h0m0s
   install:

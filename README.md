@@ -93,7 +93,7 @@ spec:
       sourceRef:
         kind: HelmRepository
         name: podinfo
-        namespace: flux-system
+        namespace: flux-system-test
   interval: 5m
   values:
     cache: redis-master.redis:6379
@@ -209,7 +209,7 @@ apiVersion: kustomize.toolkit.fluxcd.io/v1beta1
 kind: Kustomization
 metadata:
   name: apps
-  namespace: flux-system
+  namespace: flux-system-test
 spec:
   interval: 10m0s
   dependsOn:
@@ -225,12 +225,12 @@ apiVersion: kustomize.toolkit.fluxcd.io/v1beta1
 kind: Kustomization
 metadata:
   name: infrastructure
-  namespace: flux-system
+  namespace: flux-system-test
 spec:
   interval: 10m0s
   sourceRef:
     kind: GitRepository
-    name: flux-system
+    name: flux-system-test
   path: ./infrastructure
 ```
 
@@ -263,7 +263,7 @@ flux bootstrap github \
     --path=clusters/staging
 ```
 
-The bootstrap command commits the manifests for the Flux components in `clusters/staging/flux-system` dir
+The bootstrap command commits the manifests for the Flux components in `clusters/staging/flux-system-test` dir
 and creates a deploy key with read-only access on GitHub, so it can pull changes inside the cluster.
 
 Watch for the Helm releases being install on staging:
@@ -306,7 +306,7 @@ Watch the production reconciliation:
 $ watch flux get kustomizations
 NAME          	REVISION                                        READY
 apps          	main/797cd90cc8e81feb30cfe471a5186b86daf2758d	True
-flux-system   	main/797cd90cc8e81feb30cfe471a5186b86daf2758d	True
+flux-system-test   	main/797cd90cc8e81feb30cfe471a5186b86daf2758d	True
 infrastructure	main/797cd90cc8e81feb30cfe471a5186b86daf2758d	True
 ```
 
@@ -338,7 +338,7 @@ Create a Kubernetes secret on your clusters with the private key:
 gpg --export-secret-keys \
 --armor 1F3D1CED2F865F5E59CA564553241F147E7C5FA4 |
 kubectl create secret generic sops-gpg \
---namespace=flux-system \
+--namespace=flux-system-test \
 --from-file=sops.asc=/dev/stdin
 ```
 
@@ -375,7 +375,7 @@ apiVersion: kustomize.toolkit.fluxcd.io/v1beta1
 kind: Kustomization
 metadata:
   name: infrastructure
-  namespace: flux-system
+  namespace: flux-system-test
 spec:
   # content omitted for brevity
   decryption:
@@ -497,12 +497,12 @@ Create a `kustomization.yaml` inside the `clusters/production-clone` dir:
 apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 resources:
-  - flux-system
+  - flux-system-test
   - ../production/infrastructure.yaml
   - ../production/apps.yaml
 ```
 
-Note that besides the `flux-system` kustomize overlay, we also include
+Note that besides the `flux-system-test` kustomize overlay, we also include
 the `infrastructure` and `apps` manifests from the production dir.
 
 Push the changes to the main branch:
@@ -514,7 +514,7 @@ git add -A && git commit -m "add production clone" && git push
 Tell Flux to deploy the production workloads on the `production-clone` cluster:
 
 ```sh
-flux reconcile kustomization flux-system \
+flux reconcile kustomization flux-system-test \
     --context=production-clone \
     --with-source 
 ```
