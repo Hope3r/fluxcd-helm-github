@@ -16,8 +16,8 @@ spec:
     ## Additional volumeMounts to the main container.
     extraVolumeMounts:
       - name: config
-        mountPath: /usr/share/nginx/html/index.json
-        subPath: index.html
+        mountPath: /usr/share/nginx/html/index.html
+        subPath: index
 
     ## Additional volumes to the pod.
     # extraVolumes:
@@ -26,5 +26,5 @@ spec:
 
     ## Additional files to the configmap.
     extraFiles:
-      index.html: |
+      index: |
         Test test un deux un deux
