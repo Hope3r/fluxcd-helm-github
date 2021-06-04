@@ -25,6 +25,8 @@ spec:
           tls: false
     persistence:
       enables: true
+      storageClassName: nfs
+      volumeName: nfs-charts
       pv:
         enabled: true
         pvname: nfs-charts
