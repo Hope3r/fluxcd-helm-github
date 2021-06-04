@@ -19,7 +19,6 @@ spec:
   values:
     env:
       open:
-        # disable Prometheus metrics
         DISABLE_METRICS: false
         DISABLE_API: false
     serviceMonitor:
