@@ -23,3 +23,14 @@ spec:
         - name: registry.local
           path: /
           tls: false
+    persistence:
+      enables: true
+      pv:
+        enabled: true
+        pvname: nfs-charts
+        capacity:
+          storage: 8Gi
+        accessMode: ReadWriteOnce
+        nfs:
+          server: 192.168.1.24
+          path: "/var/k8s/nginx"
