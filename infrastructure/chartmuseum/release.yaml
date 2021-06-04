@@ -19,7 +19,7 @@ spec:
   values:
     ingress:
       enabled: false
-      hosts: []
+      hosts:
         - name: registry.local
           path: /
           tls: false
