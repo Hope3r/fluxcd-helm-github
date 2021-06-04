@@ -10,7 +10,7 @@ spec:
       sourceRef:
         kind: HelmRepository
         name: monocular
-        namespace: flux-system-test
+        namespace: flux-system
       version: "1.4.15"
   interval: 30s
   install:
