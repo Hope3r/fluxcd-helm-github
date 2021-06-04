@@ -6,3 +6,4 @@ resources:
   - podinfo.yaml
   - nginx.yaml
   - chartmuseum.yaml
+  - monocular.yaml
