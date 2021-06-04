@@ -21,7 +21,6 @@ spec:
       open:
         DISABLE_METRICS: false
         DISABLE_API: false
-        STORAGE: amazon
     serviceMonitor:
       enabled: true
     ingress:
