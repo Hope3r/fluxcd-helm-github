@@ -18,6 +18,8 @@ spec:
       retries: 3
   values:
     ingress:
-      - name: monocular.local
-        path: /
-        tls: false
+      enabled: true
+      hosts:
+        - name: monocular.local
+          path: /
+          tls: false
