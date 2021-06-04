@@ -17,6 +17,11 @@ spec:
     remediation:
       retries: 3
   values:
+    env:
+      open:
+        # disable Prometheus metrics
+        DISABLE_METRICS: false
+        DISABLE_API: false
     serviceMonitor:
       enabled: true
     ingress:
@@ -27,6 +32,7 @@ spec:
           tls: false
     persistence:
       enabled: true
+      path: /storage
       storageClass: chartmuseum
       volumeName: nfs-charts
       pv:
