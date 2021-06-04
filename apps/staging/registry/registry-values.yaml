@@ -27,4 +27,4 @@ spec:
     ## Additional files to the configmap.
     extraFiles:
       index: |
-        Test test un deux un deux
+        Staging
