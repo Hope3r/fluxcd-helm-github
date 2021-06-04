@@ -23,6 +23,7 @@ spec:
         DISABLE_API: false
     serviceMonitor:
       enabled: true
+      namespace: prometheus
     ingress:
       enabled: true
       hosts:
