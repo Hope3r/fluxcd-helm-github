@@ -25,7 +25,6 @@ spec:
           tls: false
     persistence:
       enabled: true
-      storageClass: chartmuseum
       volumeName: nfs-charts
       pv:
         enabled: true
