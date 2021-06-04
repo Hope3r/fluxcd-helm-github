@@ -19,5 +19,5 @@ spec:
   values:
     ingress:
       - name: monocular.local
-          path: /
-          tls: false
+        path: /
+        tls: false
