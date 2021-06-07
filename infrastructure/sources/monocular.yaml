@@ -3,5 +3,5 @@ kind: HelmRepository
 metadata:
   name: monocular
 spec:
-  interval: 30s
+  interval: 2m
   url: https://helm.github.io/monocular
