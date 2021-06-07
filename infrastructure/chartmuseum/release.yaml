@@ -9,7 +9,7 @@ spec:
       chart: chartmuseum
       sourceRef:
         kind: HelmRepository
-        name: chartmuseum
+        name: t3n
         namespace: flux-system
       version: "3.1.0"
   interval: 30s
