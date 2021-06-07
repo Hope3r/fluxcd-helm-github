@@ -185,7 +185,7 @@ spec:
   url: https://charts.bitnami.com/bitnami
 ```
 
-Note that with ` interval: 5m` we configure Flux to pull the Helm repository index every five minutes.
+Note that with ` interval: 30s.
 If the index contains a new chart version that matches a `HelmRelease` semver range, Flux will upgrade the release.
 
 ## Bootstrap staging and production
@@ -211,7 +211,7 @@ metadata:
   name: apps
   namespace: flux-system
 spec:
-  interval: 10m0s
+  interval: 30s
   dependsOn:
     - name: infrastructure
   sourceRef:
@@ -227,7 +227,7 @@ metadata:
   name: infrastructure
   namespace: flux-system
 spec:
-  interval: 10m0s
+  interval: 30s
   sourceRef:
     kind: GitRepository
     name: flux-system
