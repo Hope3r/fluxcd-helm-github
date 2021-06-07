@@ -10,7 +10,7 @@ spec:
       chart: nginx
       sourceRef:
         kind: HelmRepository
-        name: t3n
+        name: chartmuseum
         namespace: flux-system
   interval: 5m
   install:
