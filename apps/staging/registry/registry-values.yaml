@@ -14,10 +14,10 @@ spec:
       hosts:
         - registry.staging
     ## Additional volumeMounts to the main container.
-    extraVolumeMounts:
-      - name: config
-        mountPath: /usr/share/nginx/html/index.html
-        subPath: index
+    # extraVolumeMounts:
+    #   - name: config
+    #     mountPath: /usr/share/nginx/html/index.html
+    #     subPath: index
 
     ## Additional volumes to the pod.
     # extraVolumes:
