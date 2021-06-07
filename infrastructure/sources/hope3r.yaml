@@ -1,7 +1,7 @@
 apiVersion: source.toolkit.fluxcd.io/v1beta1
 kind: HelmRepository
 metadata:
-  name: chartmuseum
+  name: hope3r
 spec:
   interval: 5s
-  url: https://chartmuseum.github.io/charts
+  url: https://hope3r.github.io/helm-charts

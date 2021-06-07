@@ -10,9 +10,9 @@ spec:
       chart: nginx
       sourceRef:
         kind: HelmRepository
-        name: chartmuseum
+        name: hope3r
         namespace: flux-system
-  interval: 5m
+  interval: 30s
   install:
     remediation:
       retries: 3
