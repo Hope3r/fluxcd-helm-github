@@ -4,4 +4,4 @@ metadata:
   name: chartmuseum
 spec:
   interval: 5s
-  url: https://chartmuseum.github.io/charts
+  url: http://registry.local
