@@ -3,5 +3,5 @@ kind: HelmRepository
 metadata:
   name: t3n
 spec:
-  interval: 30m
+  interval: 30s
   url: https://storage.googleapis.com/t3n-helm-charts
