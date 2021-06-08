@@ -25,3 +25,7 @@ spec:
       replicas: 1
     ui:
       replicaCount: 1
+    sync:
+      repos:
+        - name: hope3r
+          url: https://hope3r.github.io/helm-charts/
