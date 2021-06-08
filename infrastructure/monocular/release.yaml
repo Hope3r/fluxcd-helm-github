@@ -28,7 +28,7 @@ spec:
     sync:
       repos:
         - name: hope3r
-          url: https://hope3r.github.io/helm-charts/index.yaml
+          url: https://hope3r.github.io/helm-charts
     mongodb:
       enabled: true
       persistence:
