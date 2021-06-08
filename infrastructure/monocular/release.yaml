@@ -25,6 +25,8 @@ spec:
       repos:
         - name: hope3r
           url: https://hope3r.github.io/helm-charts
+          schedule: "* * * * *"
+          successfulJobsHistoryLimit: 1
     mongodb:
       enabled: true
       persistence:
