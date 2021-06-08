@@ -20,6 +20,8 @@ spec:
     ingress:
       enabled: true
       hosts:
-        - name: monocular.local
-          path: /
-          tls: false
+        - monocular.local
+    chartsvc:
+      replicas: 3
+    ui:
+      replicaCount: 2
