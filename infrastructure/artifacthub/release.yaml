@@ -25,10 +25,10 @@ spec:
           username: hub
           password: hub
       tracker:
-        repositoriesNames:
-          - https://hope3r.github.io/helm-charts/
-        repositoriesKinds:
-          - helm
+        # repositoriesNames:
+        #   - https://hope3r.github.io/helm-charts/
+        # repositoriesKinds:
+        #   - helm
       service:
         type: ClusterIP
         port: 80
