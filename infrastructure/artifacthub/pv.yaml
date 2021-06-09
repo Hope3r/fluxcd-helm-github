@@ -11,5 +11,5 @@ spec:
   persistentVolumeReclaimPolicy: Delete
   storageClassName: artifact-hub
   nfs:
-    server: 172.30.128.7
-    path: /var/helmcharts
+    server: 192.168.1.24
+    path: "/var/k8s/hub"
