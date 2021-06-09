@@ -18,6 +18,8 @@ spec:
       retries: 3
   values:
     hub:
+      service:
+        type: ClusterIP
       ingress:
         enabled: true
         annotations:
