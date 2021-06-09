@@ -1,0 +1,27 @@
+apiVersion: helm.toolkit.fluxcd.io/v2beta1
+kind: HelmRelease
+metadata:
+  name: artifact-hub
+spec:
+  releaseName: artifact-hub
+  chart:
+    spec:
+      chart: artifact-hub
+      sourceRef:
+        kind: HelmRepository
+        name: artifact-hub
+        namespace: flux-system
+      version: "0.20.0"
+  interval: 30s
+  install:
+    remediation:
+      retries: 3
+  values:
+    # hub:
+    #   ingress:
+    #     enabled: true
+    #     rules:
+    #       host: artifacthub.tcg.services.cerise.media
+    trivy:
+      persistence:
+        

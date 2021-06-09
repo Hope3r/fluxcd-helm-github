@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: artifact-hub
+  namespace: artifact-hub
+spec:
+  capacity:
+    storage: 8Gi
+  accessModes:
+    - ReadWriteMany
+  persistentVolumeReclaimPolicy: Delete
+  storageClassName: artifact-hub
+  nfs:
+    server: 172.30.128.7
+    path: /var/helmcharts
