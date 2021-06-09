@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: nfs-charts
+  namespace: chartmuseum
+spec:
+  capacity:
+    storage: 8Gi
+  accessModes:
+    - ReadWriteMany
+  persistentVolumeReclaimPolicy: Delete
+  storageClassName: chartmuseum
+  nfs:
+    server: 192.168.1.24
+    path: "/var/k8s/nginx"

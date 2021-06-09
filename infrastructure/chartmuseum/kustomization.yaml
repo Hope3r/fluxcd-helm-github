@@ -4,4 +4,5 @@ namespace: chartmuseum
 resources:
   - namespace.yaml
   - storageclass.yaml
+  - pv.yaml
   - release.yaml
