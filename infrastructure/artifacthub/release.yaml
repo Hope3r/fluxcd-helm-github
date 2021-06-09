@@ -18,6 +18,8 @@ spec:
       retries: 3
   values:
     hub:
+      server:
+        allowPrivateRepositories: true
       service:
         type: ClusterIP
         port: 80
