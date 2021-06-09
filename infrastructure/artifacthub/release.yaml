@@ -19,6 +19,13 @@ spec:
   values:
     hub:
       server:
+        oauth:
+          github:
+            enabled: true
+            redirectURL: https://hub.local/oauth/github/callback
+          google:
+            enabled: true
+            redirectURL: https://hub.local/oauth/google/callback
         allowPrivateRepositories: true
         basicAuth:
           enabled: true
@@ -47,4 +54,4 @@ spec:
         tls: []
     # trivy:
     #   persistence:
-        
+      
