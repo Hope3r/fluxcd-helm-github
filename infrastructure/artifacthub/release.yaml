@@ -17,11 +17,11 @@ spec:
     remediation:
       retries: 3
   values:
-    # hub:
-    #   ingress:
-    #     enabled: true
-    #     rules:
-    #       host: artifacthub.tcg.services.cerise.media
+    hub:
+      ingress:
+        enabled: true
+        rules:
+          host: hub.local
     # trivy:
     #   persistence:
         
