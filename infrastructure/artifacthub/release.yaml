@@ -30,7 +30,7 @@ spec:
               pathType: Prefix
               backend:
                 service:
-                  name: {{ include "chart.resourceNamePrefix" . }}hub
+                  name: hub
                   port:
                     number: 80
         tls: []
