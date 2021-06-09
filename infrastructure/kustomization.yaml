@@ -6,4 +6,4 @@ resources:
   # - redis
   - chartmuseum
   # - monocular
-  # - artifacthub
+  - artifacthub
