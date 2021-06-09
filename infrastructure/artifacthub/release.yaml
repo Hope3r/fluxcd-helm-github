@@ -20,6 +20,10 @@ spec:
     hub:
       server:
         allowPrivateRepositories: true
+        basicAuth:
+          enabled: true
+          username: hub
+          password: hub
       service:
         type: ClusterIP
         port: 80
