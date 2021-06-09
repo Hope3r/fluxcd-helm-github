@@ -3,6 +3,6 @@ kind: Kustomization
 namespace: chartmuseum
 resources:
   - namespace.yaml
-  - storageclass.yaml
+  # - storageclass.yaml
   - pv.yaml
   - release.yaml
