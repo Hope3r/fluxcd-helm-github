@@ -9,3 +9,4 @@ resources:
   - monocular.yaml
   - hope3r.yaml
   - artifact-hub.yaml
+  - jetstack.yaml
