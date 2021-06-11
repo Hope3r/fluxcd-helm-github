@@ -12,3 +12,9 @@
 *.out
 
 bin/
+
+bootstrap
+*.crt
+*.key
+*.csr
+*.pem

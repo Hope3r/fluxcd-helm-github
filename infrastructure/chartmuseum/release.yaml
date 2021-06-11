@@ -27,9 +27,10 @@ spec:
     ingress:
       enabled: true
       hosts:
-        - name: registry.local
+        - name: chartmuseum.k8s
           path: /
-          tls: false
+          tls: true
+          tlsSecret: chartmuseum-cert-secret
     persistence:
       enabled: true
       path: /storage
